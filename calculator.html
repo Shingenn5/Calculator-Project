@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Labor Calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<body class="bg-dark">
+        <div class="col-12 d-flex justify-content-center align-items-center min-vh-100">
+        <div class="card col-11 col-md-6 col-lg-5">
+        <div class="card-body">
+            <form>
+            <h2 class="text-center">Available Wage Calculator</h2>
+            <label class="form-label" for="txtRevenue">Revenue Per Hour</label>
+            <div class="input-group">
+            <span class="input-group-text bg-light">$</span>
+            <input type="number" step="0.01" class="form-control" id="txtRevenue" placeholder="0.00">
+            </div> <label class="form-label" for="txtBenefitPercent">Benefit Percent</label>
+            <div class="input-group">
+            <span class="input-group-text bg-light">%</span>
+            <input type="number" step="0.01" class="form-control" id="txtBenefitPercent" placeholder="0.00">
+            </div>
+            <label class="form-label mt-4" for="txtLaborCostPercentage">Labor Cost Percentage</label>
+            <input class="form-control" id="txtLaborCostPercentage" disabled>
+            <label class="form-label" for="txtAvailableLaborCostPerHour">Available Labor Cost / Hour</label>
+            <input class="form-control" id="txtAvailableLaborCostPerHour" disabled>
+            <label class="form-label" for="txtCostofBenefits">Cost of Benefits</label>
+            <input class="form-control" id="txtCostofBenefits" disabled>
+            <label class="form-label" for="txtAvailabeWage">Available Hourly Wage</label>
+            <input class="form-control" id="txteWage" disabled>
+            <h4 class="text-center">Results</h4>
+            <input class="form-control" id="txtResult" disabled>
+            <button class="btn btn-primary col-12 mt-4" id="btnCalculate" type="button">Calculate</button>
+            </form>
+            </div>
+            </div>
+            </div>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>
