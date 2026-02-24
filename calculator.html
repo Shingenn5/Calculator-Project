@@ -4,22 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Labor Calculator</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/minty/bootstrap.min.css" integrity="sha384-H4X+4tKc7b8s4GoMrylmy2ssQYpDHoqzPa9aKXbDwPoPUA3Ra8PA5dGzijN+ePnH" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
 </head>
 <body class="bg-dark">
         <div class="col-12 d-flex justify-content-center align-items-center min-vh-100">
         <div class="card col-11 col-md-6 col-lg-5">
         <div class="card-body">
             <form>
-            <h2 class="text-center">Available Wage Calculator</h2>
+            <i class="bi bi-calculator"></i>
+            <h2 class="text-center">Wage Calculator</h2>
+            <p class="text-center mb-4">Calculate the available hourly wage based on revenue and benefit costs.</p>
+            <div class="p-3 border rounded mb-3">
             <label class="form-label" for="txtRevenue">Revenue Per Hour</label>
             <div class="input-group">
             <span class="input-group-text bg-light">$</span>
             <input type="number" step="0.01" class="form-control" id="txtRevenue" placeholder="0.00">
             </div> <label class="form-label" for="txtBenefitPercent">Benefit Percent</label>
+            
             <div class="input-group">
             <span class="input-group-text bg-light">%</span>
             <input type="number" step="0.01" class="form-control" id="txtBenefitPercent" placeholder="0.00">
+            <button class="btn btn-primary col-12 mt-4" id="btnCalculate" type="button">Calculate</button>
             </div>
             <label class="form-label mt-4" for="txtLaborCostPercentage">Labor Cost Percentage</label>
             <input class="form-control" id="txtLaborCostPercentage" disabled>
@@ -28,10 +34,11 @@
             <label class="form-label" for="txtCostofBenefits">Cost of Benefits</label>
             <input class="form-control" id="txtCostofBenefits" disabled>
             <label class="form-label" for="txtAvailabeWage">Available Hourly Wage</label>
-            <input class="form-control" id="txteWage" disabled>
+            <input class="form-control" id="txtWage" disabled>
+            </div>
             <h4 class="text-center">Results</h4>
             <input class="form-control" id="txtResult" disabled>
-            <button class="btn btn-primary col-12 mt-4" id="btnCalculate" type="button">Calculate</button>
+            <button class="btn btn-secondary col-12 mt-4" id="btnReset" type="button">Reset</button>
             </form>
             </div>
             </div>
