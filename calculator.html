@@ -48,12 +48,11 @@
                     let fltBenefitPercent = document.querySelector('#txtBenefitPercent').value
                     let fltLaborCost = fltRevenue * 0.03 
                     let fltBenefitCost = fltLaborCost - fltBenefitPercent / 100
-                    let fltAvailableWage = fltLaborCost = 
+                    let fltAvailableWage = fltLaborCost -fltBenefitCost
                     
                         document.getElementById('txtAvailableLaborCostPerHour').value = fltLaborCost
                         document.getElementById('txtCostofBenefits').value = fltBenefitCost
                         document.getElementById('txtWage').value = fltAvailableWage
-                        document.getElementById('txtAvailableWage').value = fltAvailableWage
         })
             </script>
 </body>
