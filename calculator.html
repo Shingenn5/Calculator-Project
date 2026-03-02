@@ -46,10 +46,12 @@
             document.querySelector('#btnCalculate').addEventListener('click', function() {
                     let fltRevenue = document.querySelector('#txtRevenue').value
                     let fltBenefitPercent = document.querySelector('#txtBenefitPercent').value
-                    let fltLaborCost = fltRevenue * 0.03 
-                    let fltBenefitCost = fltLaborCost - fltBenefitPercent / 100
-                    let fltAvailableWage = fltLaborCost - fltBenefitCost
                     
+                    let laborCostRate = 0.30;
+                    let fltLaborCost = fltRevenue * laborCostRate;
+                    let fltAvailableWage = fltLaborCost / (1 + (fltBenefitPercent / 100));
+                    let fltBenefitCost = fltLaborCost - fltAvailableWage
+
                         document.getElementById('txtLaborCostPercentage').value = (laborCostRate * 100);
                         document.getElementById('txtAvailableLaborCostPerHour').value = fltLaborCost
                         document.getElementById('txtCostofBenefits').value = fltBenefitCost
